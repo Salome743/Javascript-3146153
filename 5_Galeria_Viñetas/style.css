@@ -1,0 +1,135 @@
+*{
+   /*  margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pantalla{
+    position: relative; /* relative porque es padre */
+    /* border: 3px solid black; */
+    width: 750px;
+    height: 500px;
+    margin: auto;
+}
+
+.pantalla .fondo{
+    width: 100%;
+}
+
+.bloque1{
+    position: absolute; /* absolute porque es hijo */
+    top: 50%;
+    left: 24%;
+    animation: mover 2s linear infinite;
+}
+
+.bloque2{
+    position: absolute;
+    top: 31%;
+    left: 53%;
+    animation: regresar 2s linear infinite;
+
+    
+}
+
+.moneda1{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+
+.moneda2{
+    position: absolute;
+    top: 35%;
+    left: 34%;
+}
+
+.moneda3{
+    position: absolute;
+    top: 49%;
+    left: 88.5%;
+}
+
+.corazon{
+    position: absolute;
+    top: 18%;
+    left: 54%;
+}
+
+/* clase para asignar la animacion */
+.saltar{
+    animation: salto 0.6s ease forwards;
+}
+
+.mover{
+     animation: salto 0.6s linear infinite;
+}
+
+.regresar{
+     animation: salto 0.6s linear infinite;
+}
+
+/* animacion moneda desaparece */
+@keyframes salto {
+    0%{transform: translateY(0); opacity: 1;}
+    30%{transform: translateY(-60px);}
+    100%{transform: translateY(0px); opacity: 0;}
+}
+
+@keyframes mover {
+    0%{transform: translateX(0); }
+    30%{transform: translateX(-60px);}
+    100%{transform: translateX(0px); }
+}
+
+@keyframes regresar {
+    0%{transform: translateX(0); }
+    30%{transform: translateX(-60px);}
+    100%{transform: translateX(0px); }
+}
+
+/* Contador monedas y corazones */
+
+    .hud {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      font-family: 'Arial', sans-serif;
+      font-size: 18px;
+      color: white;
+      z-index: 1000;
+    }
+
+    .hud-item {
+      display: flex;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    .hud-item img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+
+    button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #ff3333;
+}
