@@ -3,6 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+.d-none{
+    display: none;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 20px;
+}
 
 .pantalla{
     position: relative; /* relative porque es padre */
@@ -132,4 +142,11 @@
 
 button:hover {
     background-color: #ff3333;
+}
+.fondo-2{
+    filter: sepia(1);
+}
+
+.fondo-3{
+    filter: grayscale(1);
 }
