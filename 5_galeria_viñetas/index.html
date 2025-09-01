@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrusel Escenas</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrusel Escenas</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
+  <body>
+    <div class="carrusel">
+      <!-- Botón anterior -->
+      <button class="btn anterior">&#10094;</button>
 
-<body>
-  <div class="carrusel">
-    <!-- Botón anterior -->
-    <button class="btn anterior">&#10094;</button>
-
-    <!-- Escenas -->
-    <div class="escenas">
-      <!-- Escena 1 -->
-      <div class="escena activa">
-        <div class="pantalla">
-          <div class="hud">
-            <div class="hud-item">
-              <img src="./assets/MONEDA1.png" alt="Moneda">
-              <span id="contador-monedas">0</span>
+      <!-- Escenas -->
+      <div class="escenas">
+        <!-- Escena 1 -->
+        <div class="escena activa">
+          <div class="pantalla">      
+            <div class="hud">
+              <div class="hud-item">
+                <img src="./assets/MONEDA1.png" alt="Moneda" />
+                <span id="contador-monedas">0</span>
+              </div>
+              <div class="hud-item">
+                <img src="./assets/coarazon1.png" alt="Corazón" />
+                <span id="contador-corazones">0</span>
+              </div>
             </div>
-            <div class="hud-item">
-              <img src="./assets/coarazon1.png" alt="Corazón">
-              <span id="contador-corazones">0</span>
-            </div>
+            <img class="fondo" src="./assets/fondo2.png" alt="" />
+            <img class="bloque1" src="./assets/ladrillos2.png" alt="" />
+            <img class="bloque2" src="./assets/ladrillo1.png" alt="" />
+            <img class="coin moneda1" src="./assets/moneda1.png" alt="" />
+            <img class="coin moneda2" src="./assets/moneda 2.png" alt="" />
+            <img class="coin moneda3" src="./assets/moneda 3.png" alt="" />
+            <img class="corazon" src="./assets/coarazon1.png" alt="" />
           </div>
-          <img class="fondo" src="./assets/fondo2.png" alt="">
-          <img class="bloque1" src="./assets/ladrillos2.png" alt="">
-          <img class="bloque2" src="./assets/ladrillo1.png" alt="">
-          <img class="coin moneda1" src="./assets/moneda1.png" alt="">
-          <img class="coin moneda2" src="./assets/moneda 2.png" alt="">
-          <img class="coin moneda3" src="./assets/moneda 3.png" alt="">
-          <img class="corazon" src="./assets/coarazon1.png" alt="">
+        </div>
+
+        <!-- Escena 2  -->
+        <div class="escena">
+          <div class="pantalla">
+            <img class="fondo" src="./assets/retro-6932862_1280.jpg" alt="" />
+          </div>
+        </div>
+
+        <!-- Escena 3 -->
+        <div class="escena">
+          <div class="pantalla">
+            <img
+              class="fondo"
+              src="./assets/istockphoto-1368816198-1024x1024.png"
+              alt=""
+            />
+          </div>
         </div>
       </div>
 
-      <!-- Escena 2  -->
-      <div class="escena">
-        <div class="pantalla">
-
-        </div>
-      </div>
-
-      <!-- Escena 3 -->
-      <div class="escena">
-        <div class="pantalla">
-          
-        </div>
-      </div>
+      <!-- Botón siguiente -->
+      <button class="btn siguiente">&#10095;</button>
     </div>
 
-    <!-- Botón siguiente -->
-    <button class="btn siguiente">&#10095;</button>
-  </div>
+    <!-- Miniaturas -->
+    <div class="miniaturas">
+      <img src="./assets/fondo2.png" data-index="0" alt="Miniatura 1" />
+      <img src="./assets/retro-6932862_1280.jpg" data-index="1" alt="Miniatura 2" />
+      <img src="./assets/istockphoto-1368816198-1024x1024.png" data-index="2" alt="Miniatura 3" />
+    </div>
 
-  <!-- Miniaturas -->
-  <div class="miniaturas">
-    <img src="./assets/fondo2.png" data-index="0" alt="Miniatura 1">
-    <img src="./assets/fondo3.png" data-index="1" alt="Miniatura 2">
-    <img src="./assets/fondo4.png" data-index="2" alt="Miniatura 3">
-  </div>
+     <img class="sound-button-1" src="./assets/audio-150191_1280.png"alt="" />
+    
+              <audio id="audio-escena-1" src="./assets/myinstants.mp3"></audio>
+              <audio id="audio-escena-2" src="./assets/retro-coin-get-super-mario-galaxy.mp3"></audio>
+              <audio id="audio-escena-3" src="./assets/gameover_1.mp3"></audio>
 
-  <script src="./app.js"></script>
-</body>
+    <script src="./app.js"></script>
+  </body>
 </html>

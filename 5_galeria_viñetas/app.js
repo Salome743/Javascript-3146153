@@ -28,6 +28,8 @@ corazones.forEach(function (corazon) {
     })
 })
 
+
+
 //Galeria
 const escenas = document.querySelectorAll(".escena");
 const btnAnterior = document.querySelector(".anterior");
@@ -68,3 +70,24 @@ btnAnterior.addEventListener("click", function(){
     }
     mostrarEscena(indice)
 })
+
+const audios = [
+    document.querySelector("#audio-escena-1"),
+    document.querySelector("#audio-escena-2"),
+    document.querySelector("#audio-escena-3")
+];
+
+let audioActivo = null;
+document.querySelector(".sound-button-1").addEventListener("click", function() {
+    if (audioActivo) {
+        audioActivo.pause();
+        audioActivo.currentTime = 0;
+        audioActivo = null;
+        this.classList.remove("activo");
+    } else {
+        audioActivo = audios[indice];
+        audioActivo.play();
+        this.classList.add("activo");
+    }
+});
+

@@ -4,10 +4,19 @@
     box-sizing: border-box;
 }
 .pantalla{
-    position: relative;
-    width: 750px;
-    height:500px;
-    margin: auto;
+  position: relative;
+  width: 750px;
+  height:500px;
+  margin: auto;
+}
+.sound-button-1{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 45px;
+    left: 450px;
+    z-index: 1000;
+    cursor: pointer;
 }
 
 .pantalla .fondo{
